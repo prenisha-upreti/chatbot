@@ -17,7 +17,7 @@ function Bot() {
   setLoading(true);
   
   try {
-    const res = await axios.post("http://localhost:4002/bot/v1/message", {
+    const res = await axios.post("https://chatbot-b-chi.vercel.app//bot/v1/message", {
       text: input
     });
 

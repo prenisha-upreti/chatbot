@@ -10,7 +10,9 @@ const app = express();
 const port = process.env.PORT || 4002;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://chatbott-wine.vercel.app/" // <-- your frontend domain here
+}));
 
 async function startServer() {
   try {
