@@ -17,7 +17,7 @@ function Bot() {
   setLoading(true);
   
   try {
-    const res = await axios.post("https://localhost:4002/bot/v1/message", {
+    const res = await axios.post("http://localhost:4002/bot/v1/message", {
       text: input
     });
 
@@ -47,7 +47,7 @@ function Bot() {
       <header className="fixed top-0 left-0 w-full border-b border-gray-800 bg-[#0d0d0d] z-10">
         <div className=" container mx-auto flex justify-between items-center px-6 py-4">
           <h1 className="text-lg font-bold">KMC WOMEN CELL BOT</h1>
-          <FaUserCircle size={30} className="cursor-pointer"  />
+          <FaUserCircle size={30} className="cursor-pointer" />
         </div>
       </header>
 
@@ -93,7 +93,7 @@ function Bot() {
             <input
               type="text"
               className="flex-1 bg-transparent outline-none text-white placeholder-gray-400 px-2"
-              placeholder="Ask WARD WOMEN CELL BOT..."
+              placeholder="Ask WARD WOMEN CELL..."
              value={input}
              onChange={(e) => setInput(e.target.value)}
              onKeyDown={handleKeyPress}
